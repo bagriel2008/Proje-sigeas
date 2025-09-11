@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
+/* Reset e Estilos Globais */
+:root {
+    /* Paleta Primária */
+    --color-primary-baby-blue: #EAFBFF;
+    --color-primary-ivory: #FCF8F6;
+
+    /* Paleta Secundária */
+    --color-secondary-teal-green: #00BBD1;
+    --color-secondary-coral: #FFA0A3;
+
+    /* Paleta Neutra */
+    --color-neutral-dark-blue: #050A30;
+    --color-neutral-midnight: #003D7A;
+    --color-neutral-pewter: #96A1A8;
+    --color-neutral-white: #FFFFFF;
+
+    /* Feedback/Estado */
+    --color-feedback-success: #B4F8C8;
+    --color-feedback-alert: #FEDE00;
+    --color-feedback-error: #FF424E;
+    --color-feedback-info: #FFA0A3;
+
+    /* Tipografia */
+    --font-body: 'Inter', sans-serif;
+    --font-header: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-primary-ivory);
+    color: var(--color-neutral-midnight);
+    line-height: 1.6;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Tela de Login --- */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container form {
+    background: var(--color-neutral-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-neutral-dark-blue);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: var(--color-feedback-error);
+    text-align: center;
+    margin-top: 10px;
+    min-height: 1em;
+}
+
+.login-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--color-primary-baby-blue);
+    border-radius: 5px;
+    font-size: 0.9em;
+    max-width: 400px;
+    text-align: left;
+}
+
+/* --- Painéis (Admin, Professor, Aluno) --- */
+.panel-header {
+    background: var(--color-neutral-dark-blue);
+    color: var(--color-neutral-white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel {
+    background: var(--color-neutral-white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary-teal-green);
+    padding-bottom: 10px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-primary-baby-blue);
+    color: var(--color-neutral-dark-blue);
+    text-align: center;
+    margin-right: 10px;
+    transition: background 0.3s;
+    font-family: var(--font-header);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #d4f7ff; /* Tom mais escuro de baby blue */
+}
+
+.btn-danger { background-color: var(--color-feedback-error); color: var(--color-neutral-white); }
+.btn-danger:hover { background-color: #e82a36; }
+
+.btn-success { background-color: var(--color-feedback-success); color: var(--color-neutral-dark-blue); }
+.btn-success:hover { background-color: #a2f6b9; }
+
+/* Tabelas */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: var(--color-neutral-white);
+    font-family: var(--font-header);
+}
+
+.data-table tr:hover {
+    background-color: var(--color-primary-ivory);
+}
+
+/* Inputs e Selects dentro dos painéis */
+select, input[type="text"], input[type="number"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    color: var(--color-neutral-dark-blue);
+}
+
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .panel-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .panel-header h1 {
+        margin-bottom: 10px;
+    }
+    .data-table, .data-table tbody, .data-table tr, .data-table td {
+        display: block;
+        width: 100%;
+    }
+    .data-table thead {
+        display: none;
+    }
+    .data-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+    .data-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .data-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

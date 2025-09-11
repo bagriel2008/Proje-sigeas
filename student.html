@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <h1>Painel do Aluno</h1>
+        <button id="logout-btn" class="btn btn-danger">Sair</button>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h2 id="welcome-student">Olá, [Nome do Aluno]!</h2>
+            <p><strong>Turma:</strong> <span id="student-turma"></span></p>
+        </section>
+
+        <section class="panel">
+            <h2>Minhas Notas</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Avaliação</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody id="notas-body"></tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2>Minha Frequência</h2>
+            <p><strong>Total de Faltas:</strong> <span id="total-faltas"></span></p>
+            <div id="frequencia-historico"></div>
+        </section>
+    </main>
+
+    <script src="./login.js"></script>
+</body>
+</html>

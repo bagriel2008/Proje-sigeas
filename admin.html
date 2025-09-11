@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <h1>Painel do Administrador</h1>
+        <button id="logout-btn" class="btn btn-danger">Sair</button>
+    </header>
+
+    <main class="container">
+        <!-- Seção de Turmas -->
+        <section class="panel">
+            <h2>Gerenciar Turmas</h2>
+            <button class="btn" onclick="openModal('turma-modal')">Nova Turma</button>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome da Turma</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="turmas-table-body">
+                    <!-- Linhas de turmas serão inseridas aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção de Professores -->
+        <section class="panel">
+            <h2>Gerenciar Professores</h2>
+            <button class="btn" onclick="openModal('professor-modal')">Novo Professor</button>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Usuário</th>
+                        <th>Turmas</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="professores-table-body">
+                    <!-- Linhas de professores serão inseridas aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção de Alunos -->
+        <section class="panel">
+            <h2>Gerenciar Alunos</h2>
+            <button class="btn" onclick="openModal('aluno-modal')">Novo Aluno</button>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Usuário</th>
+                        <th>Turma</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="alunos-table-body">
+                    <!-- Linhas de alunos serão inseridas aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modais para Cadastro/Edição -->
+    <div id="turma-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('turma-modal')">&times;</span>
+            <h3>Nova/Editar Turma</h3>
+            <form id="turma-form">
+                <input type="hidden" id="turma-id">
+                <input type="text" id="turma-nome" placeholder="Nome da Turma" required>
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="professor-modal" class="modal">
+        <!-- Estrutura similar para o modal de professor -->
+    </div>
+
+    <div id="aluno-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('aluno-modal')">&times;</span>
+            <h3>Novo/Editar Aluno</h3>
+            <form id="aluno-form">
+                <input type="hidden" id="aluno-id">
+                <input type="text" id="aluno-nome" placeholder="Nome do Aluno" required>
+                <input type="text" id="aluno-usuario" placeholder="Usuário de login" required>
+                <select id="aluno-turma" required></select>
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>
