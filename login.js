@@ -41,34 +41,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const loginError = document.getElementById('login-error');
 
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const username = e.target.username.value;
-        const password = e.target.password.value;
-
-        const users = JSON.parse(localStorage.getItem('users'));
-        const user = users.find(u => u.username === username && u.password === password);
-
-        if (user) {
-            // Salva o usuário logado na sessionStorage (dura apenas enquanto a aba estiver aberta)
-            sessionStorage.setItem('loggedInUser', JSON.stringify(user));
-
-            switch (user.role) {
-                case 'admin':
-                    window.location.href = 'admin.html';
-                    break;
-                case 'teacher':
-                    window.location.href = 'teacher.html';
-                    break;
-                case 'student':
-                    window.location.href = 'student.html';
-                    break;
-                default:
-                    loginError.textContent = 'Perfil de usuário desconhecido.';
+    // Adiciona o listener apenas se o formulário de login existir na página
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const username = e.target.username.value;
+            const password = e.target.password.value;
+    
+            const users = JSON.parse(localStorage.getItem('users'));
+            const user = users.find(u => u.username === username && u.password === password);
+    
+            if (user) {
+                // Salva o usuário logado na sessionStorage (dura apenas enquanto a aba estiver aberta)
+                sessionStorage.setItem('loggedInUser', JSON.stringify(user));
+    
+                //Role esta fazendo a verificação da função do usuario que esta logando
+                switch (user.role) {
+                    case 'admin':
+                        window.location.href = 'admin.html';
+                        break;
+                    case 'teacher':
+                        window.location.href = 'teacher.html';
+                        break;
+                    case 'student':
+                        window.location.href = 'student.html';
+                        break;
+                    default:
+                        loginError.textContent = 'Perfil de usuário desconhecido.';
+                }
+            } else {
+                loginError.textContent = 'Usuário ou senha inválidos.';
             }
-        } else {
-            loginError.textContent = 'Usuário ou senha inválidos.';
-        }
-    });
+        });
+    }
+
+    // Adiciona o listener apenas se o botão de logout existir na página
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            sessionStorage.removeItem('loggedInUser');
+            window.location.href = './index.html';
+        });
+    }
 });
