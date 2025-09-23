@@ -6,12 +6,12 @@
 * Gerenciar turmas.
 * Gerenciar professores.
 * Gerenciar alunos.
-##Professor:
+## Professor:
 
 * Visualizar suas turmas.
 * Lançar chamadas e notas.
 
-Aluno:
+## Aluno:
 
 * Consultar suas notas.
 * Acompanhar sua frequência.
