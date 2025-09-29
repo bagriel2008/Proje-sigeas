@@ -60,138 +60,138 @@ npm i
 - **Docebo**: analytics e automação além do modelo “sala de aula”.  
 - **Schoology**: foco no dia a dia escolar com participação dos pais.
 
-🎭 Criação de Personas
+## 🎭 Criação de Personas
 
-👩‍💼 Administrador — Usuário: admin | Senha: admin123
+### 👩‍💼 Administrador — Usuário: admin | Senha: admin123
 
-Objetivos:
+**Objetivos:**
 
-Padronizar currículos e trilhas; acompanhar métricas de engajamento e notas.
+- Padronizar currículos e trilhas; acompanhar métricas de engajamento e notas.
 
-Garantir acessibilidade e comunicação com famílias.
+- Garantir acessibilidade e comunicação com famílias.
+
+**Frustrações:**
+
+- Relatórios fragmentados; difícil comparar turmas e professores.
+
+- Integrações demoradas (chamada, notas, frequência).
+
+**Necessidades no app:**
+
+- ✅ Perfis e permissões.
+
+- ✅ Gerenciar turmas.
+
+
+
+### 👨‍🏫 Professor — Usuário: prof.ana | Senha: ana123
+
+**Objetivos:**
+
+- Publicar aulas, listas e quizzes rapidamente; acompanhar domínio por habilidade.
+
+- Dar feedback ágil e reutilizar conteúdos entre turmas.
+
+**Frustrações:**
+
+- Subir provas e criar rubricas consome tempo.
+
+- Dificuldade de ver quem está com dificuldades em tempo real.
+
+**Necessidades no app:**
+
+- ✅ Registrar chamada.
+
+- ✅ Acompanhar alunos (notas/chamadas).
+
+
+
+### 👩‍🎓 Aluno — Usuário: aluno.joao | Senha: joao123
+
+**Objetivos:**
+
+- Organizar estudos, acompanhar prazos, revisar conteúdos e simular provas.
 
 Frustrações:
 
-Relatórios fragmentados; difícil comparar turmas e professores.
+- Perde prazos quando as notificações são confusas.
 
-Integrações demoradas (chamada, notas, frequência).
-
-Necessidades no app:
-
-✅ Perfis e permissões.
-
-✅ Gerenciar turmas.
-
-
-
-👨‍🏫 Professor — Usuário: prof.ana | Senha: ana123
-
-Objetivos:
-
-Publicar aulas, listas e quizzes rapidamente; acompanhar domínio por habilidade.
-
-Dar feedback ágil e reutilizar conteúdos entre turmas.
-
-Frustrações:
-
-Subir provas e criar rubricas consome tempo.
-
-Dificuldade de ver quem está com dificuldades em tempo real.
+- Aulas gravadas espalhadas.
 
 Necessidades no app:
 
-✅ Registrar chamada.
+- ✅ Consultar notas.
 
-✅ Acompanhar alunos (notas/chamadas).
+- ✅ Acompanhar frequência.
 
+## 🎨 Identidade Visual (Proposta)
+## 🎨 Paleta (HEX)
 
+### Primárias
 
-👩‍🎓 Aluno — Usuário: aluno.joao | Senha: joao123
+- Baby Blue: #EAFBFF (ações principais, barras, links)
 
-Objetivos:
+- Ivory: #FCF8F6 (backgrounds de seções, hover leve)
 
-Organizar estudos, acompanhar prazos, revisar conteúdos e simular provas.
+### Secundárias
 
-Frustrações:
+- Teal Green: #00BBD1 (destaques acadêmicos, badges)
 
-Perde prazos quando as notificações são confusas.
+- Coral: #FFA0A3 (atalhos/indicadores informativos)
 
-Aulas gravadas espalhadas.
+### Neutros
 
-Necessidades no app:
+- Dark Blue: #050A30 (títulos)
 
-✅ Consultar notas.
+- Midnight: #003D7A (texto secundário)
 
-✅ Acompanhar frequência.
+- Pewter: #96A1A8 (cards, superfícies)
 
-🎨 Identidade Visual (Proposta)
-🎨 Paleta (HEX)
+- Branco: #FFFFFF
 
-Primárias
+### Feedback/Estado
 
-Baby Blue: #EAFBFF (ações principais, barras, links)
+- Sucesso: #B4F8C8
 
-Ivory: #FCF8F6 (backgrounds de seções, hover leve)
+- Alerta: #FEDE00
 
-Secundárias
+- Erro: #FF424E
 
-Teal Green: #00BBD1 (destaques acadêmicos, badges)
+- Info: #FFA0A3
 
-Coral: #FFA0A3 (atalhos/indicadores informativos)
+### ✍️ Tipografia
 
-Neutros
+- Interface/Texto corrido: Inter (sans-serif, alta legibilidade)
 
-Dark Blue: #050A30 (títulos)
+- Destaques/Headers opcionais: Source Sans 3 ou Poppins (boa hierarquia e peso variável)
 
-Midnight: #003D7A (texto secundário)
+## 💡 Justificativa de Design
 
-Pewter: #96A1A8 (cards, superfícies)
+**Por que essa paleta?**
+- As cores escolhidas passam uma sensação de calma e confiança, que é superimportante em qualquer ambiente de estudo.
 
-Branco: #FFFFFF
+- O azul bebê #EAFBFF dá ideia de leveza e organização.
 
-Feedback/Estado
+- O ivory #FCF8F6 deixa o fundo mais suave, sem cansar os olhos.
 
-Sucesso: #B4F8C8
+- O teal green #00BBD1 destaca conquistas e coisas importantes.
 
-Alerta: #FEDE00
+- O coral #FFA0A3 chama atenção de forma amigável, ideal para avisos rápidos.
 
-Erro: #FF424E
+- As cores neutras equilibram tudo e deixam o conteúdo em primeiro plano.
 
-Info: #FFA0A3
+- As cores de feedback ajudam a entender rapidamente o que está acontecendo.
 
-✍️ Tipografia
-
-Interface/Texto corrido: Inter (sans-serif, alta legibilidade)
-
-Destaques/Headers opcionais: Source Sans 3 ou Poppins (boa hierarquia e peso variável)
-
-💡 Justificativa de Design
-
-Por que essa paleta?
-As cores escolhidas passam uma sensação de calma e confiança, que é superimportante em qualquer ambiente de estudo.
-
-O azul bebê #EAFBFF dá ideia de leveza e organização.
-
-O ivory #FCF8F6 deixa o fundo mais suave, sem cansar os olhos.
-
-O teal green #00BBD1 destaca conquistas e coisas importantes.
-
-O coral #FFA0A3 chama atenção de forma amigável, ideal para avisos rápidos.
-
-As cores neutras equilibram tudo e deixam o conteúdo em primeiro plano.
-
-As cores de feedback ajudam a entender rapidamente o que está acontecendo.
-
-Por que essas fontes?
+### Por que essas fontes?
 A Inter foi escolhida porque é fácil de ler na tela, mesmo em listas pequenas.
 Para títulos, o uso de Source Sans 3 ou Poppins traz modernidade sem perder clareza.
 
-🎯 Relação com os objetivos pedagógicos
+## 🎯 Relação com os objetivos pedagógicos
 
-O design foi pensado para ser bonito, mas principalmente funcional.
+- O design foi pensado para ser bonito, mas principalmente funcional.
 
-As cores e fontes mantêm a atenção no conteúdo.
+- As cores e fontes mantêm a atenção no conteúdo.
 
-O contraste entre tons claros e escuros facilita a leitura em celulares ou projetores.
+- O contraste entre tons claros e escuros facilita a leitura em celulares ou projetores.
 
-O ambiente digital se torna mais leve, organizado e fácil de navegar.
+- O ambiente digital se torna mais leve, organizado e fácil de navegar.
